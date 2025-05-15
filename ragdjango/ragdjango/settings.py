@@ -62,6 +62,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'ragdjango.wsgi.application'
 
+
 # Database (SQLite, just like before)
 DATABASES = {
     'default': {
@@ -69,6 +70,14 @@ DATABASES = {
         'NAME': BASE_DIR / "db.sqlite3",
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'djongo',
+#         'NAME': 'ragdbs',
+        
+#     }
+# }
 
 # Authentication settings
 AUTH_PASSWORD_VALIDATORS = [
@@ -90,3 +99,6 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 # Default primary key field
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
